@@ -7,12 +7,19 @@ int main()
     printf("enter a number: ");
     scanf("%d",&s);
     int a=s;
-    int prim;
+    int prim=1;
     for (int i = 2; i <= s; i++)
     {
         if (s%i==0) //checking primality
         {
-             while (a!=0)
+            prim = 0 ;
+            break;
+        }
+        
+        
+    }
+    if (prim==0){
+         while (a!=0)
     { 
         //sum of digits of number
         sum += a%10;
@@ -39,13 +46,7 @@ int main()
         }
         
     }
-    
-        }
-    else
-    prim = 1;
-        
     }
-    
    (prim==1)?printf("it is a prime number and not smith"):(sump==sum)?printf("smith num"):printf("not a smith number");
    
    
